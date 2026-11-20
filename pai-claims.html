@@ -177,6 +177,14 @@ footer .cols{display:grid;gap:28px;grid-template-columns:2fr 1fr 1fr}
 footer a{color:var(--paper);text-decoration:none}footer a:hover{color:var(--signal)}
 footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
 
+.trust-row{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0;padding:0;list-style:none}.trust-row li{padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:14px;background:rgba(255,255,255,.025)}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}.choice .card{display:flex;flex-direction:column}.choice .card .ctas{margin-top:auto;padding-top:12px}
+.feature strong{color:var(--white)}
+.sale-band{border:1px solid rgba(90,220,184,.45);background:linear-gradient(135deg,rgba(90,220,184,.09),rgba(73,129,255,.08));border-radius:18px;padding:30px}.sale-band h2{margin-top:0}
+.mobile-buy{display:none}
+@media (max-width:720px){.choice{grid-template-columns:1fr}.mobile-buy{display:flex;position:fixed;z-index:20;left:10px;right:10px;bottom:10px;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;background:#0b0f17;border:1px solid var(--signal);border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.46)}.mobile-buy span{font-size:13px;color:var(--muted)}.mobile-buy .btn{white-space:nowrap;padding:11px 14px}body{padding-bottom:82px}}
+@media print{.mobile-buy{display:none!important}}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"PAi Claims","operatingSystem":"Windows 10, Windows 11","applicationCategory":"BusinessApplication","url":"https://nfccop.org/pai-claims.html","downloadUrl":"https://apps.microsoft.com/detail/9P255VXPD5B4","publisher":{"@type":"NGO","name":"The New Faith Church and Co-op, Inc."},
@@ -204,14 +212,15 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
 <main id="main">
 <section class="hero"><div class="wrap hero-grid">
   <div>
-    <p class="over">PAi Claims · Windows 10/11</p>
-    <h1>The carrier wrote an estimate. Now write yours.</h1>
-    <p class="lead">PAi Claims builds an itemized repair estimate from your photos, documents and measurements, priced for your state. Put it next to the carrier's and you can see what's missing, line by line.</p>
+    <p class="over">Professional claim software · Windows 10/11</p>
+    <h1>Build the complete claim before the carrier's estimate becomes the whole story.</h1>
+    <p class="lead">PAi Claims turns field notes, photos, roof data, documents and measurements into a reviewable repair estimate—then compares it with the carrier's scope, prepares the supported response and keeps the record ready for the next professional who needs it.</p>
     <div class="ctas">
       <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4?cid=nfccop-claims-hero">Get it from Microsoft Store</a>
       <a class="btn btn-ghost" href="#pricing">See pricing</a>
     </div>
-    <p class="fine">Free to download. Your first claim is <span class="mono">$20</span>. <a href="index.html#free-access">Free access</a> is available if cost is a barrier.</p>
+    <p class="fine">Download and setup are free. Your first claim is <span class="mono">$20</span>. No coverage, settlement or payment outcome is promised. <a href="index.html#free-access">Free disaster-relief access</a> is available when cost is a barrier.</p>
+    <ul class="trust-row" aria-label="Product highlights"><li>Adjuster-grade workflow</li><li>Local or frontier AI</li><li>Claim files stay with you</li><li>Human-reviewed output</li></ul>
   </div>
   <figure class="doc" aria-label="Illustrative estimate comparison" style="margin:0">
     <div class="doc-h"><span>Roof · estimate vs carrier</span><span class="tag caution">Illustrative</span></div>
@@ -229,11 +238,10 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
 
 <section><div class="wrap">
   <p class="over">Who it's for</p>
-  <h2>For people with a claim, and the people who help them.</h2>
-  <div class="grid g3" style="margin-top:28px">
-    <div class="card"><h3>Homeowners and business owners</h3><p class="muted">Your claim was underpaid or denied and you need more than a folder of papers to answer it.</p></div>
-    <div class="card"><h3>Contractors and restoration crews</h3><p class="muted">Scope the job, price it to your state, and give the carrier an itemized estimate it can follow.</p></div>
-    <div class="card"><h3>Advocates and helpers</h3><p class="muted">Work through several survivors' claims with one organized file for each. Annual access covers unlimited new claims.</p></div>
+  <h2>One platform, two ways to start.</h2>
+  <div class="choice">
+    <div class="card"><p class="over">For professionals</p><h3>Adjusters, contractors and restoration teams</h3><p class="muted">Record the inspection, organize the evidence, build the scope and estimate, compare the carrier version and prepare the supported claim package. Annual access covers unlimited new claims.</p><div class="ctas"><a class="btn btn-primary" href="#professional">See the professional workflow</a><a class="btn btn-ghost" href="#pricing">View annual access</a></div></div>
+    <div class="card"><p class="over">For property owners</p><h3>Get a working estimate before the adjuster arrives</h3><p class="muted">Start with what you know, mark what is missing or uncertain, add the carrier estimate when it arrives and see the signed difference without pretending every observation is final.</p><div class="ctas"><a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4?cid=nfccop-claims-owner">Start your first claim</a><a class="btn btn-ghost" href="#how">See how it works</a></div></div>
   </div>
 </div></section>
 
@@ -247,7 +255,12 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
     <div class="card feature"><h3>Photo review with AI</h3><p>The AI suggests damage from your photos in plain language and asks one confirming question for each item. Suggestions stay <i>provisional</i> until you mark them Yes, Not this, or Not sure. The app never treats a photo as a measurement.</p></div>
     <div class="card feature"><h3>Rooms and areas</h3><p>Price the kitchen, bedroom 2 and the roof separately, each with its own measurements. Subtotals appear on screen and in the report.</p></div>
     <div class="card feature"><h3>Reports you can hand over</h3><p>The printable estimate lists quantities, formulas, taxes, O&amp;P, source quotes and the price basis behind every line. Save it as a PDF, or export CSV, JSON and a complete claim backup.</p></div>
+    <div class="card feature"><h3>Field recording that becomes claim work</h3><p>Use your phone while walking the loss: speak, take pictures and preserve the inspection sequence. PAi Claims transcribes the recording, pairs the record with the field evidence and turns it into a review queue for the scope and estimate.</p></div>
+    <div class="card feature"><h3>Roof evidence from the sources you already use</h3><p>Bring in drone footage, roof-measurement reports or supported Google Maps and Solar roof data. Measurements remain tied to their source so a reviewer can confirm them before they control a line item.</p></div>
+    <div class="card feature"><h3>Regional pricing with time context</h3><p>Build from court-record pricing anchors, regional economic data, supplier quotes and inflation adjustment. The report identifies the basis used instead of presenting one unexplained number as universal truth.</p></div>
+    <div class="card feature"><h3>Private installation or frontier models</h3><p>Use a capable hosted frontier model when speed and breadth matter, or choose a private local installation. The private setup assesses the computer and recommends a model that fits the available hardware.</p></div>
   </div>
+  <div class="ctas"><a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4?cid=nfccop-claims-features">Download PAi Claims</a><a class="btn btn-ghost" href="#professional">Follow the full claim workflow</a></div>
 </div></section>
 
 <section id="how"><div class="wrap">
@@ -258,9 +271,23 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
     <li><b>Add the record</b>Drag in photos, the policy, estimates, receipts and letters. The original files are kept as they are.</li>
     <li><b>Review the scope</b>Accept or reject each suggested item, with the document line it came from shown next to it.</li>
     <li><b>Fill the gaps</b>The app lists any measurement, material choice, tax rate or permit fee that's still missing.</li>
-    <li><b>Compare with the carrier</b>See the scope and pricing differences next to the carrier's payment.</li>
-    <li><b>Print and send</b>Print the estimate, save it as a PDF, and keep the whole case backed up.</li>
+    <li><b>Compare with the carrier</b>Import the carrier estimate and compare scope, quantities, pricing, depreciation, deductible and payments without mixing the two estimates together.</li>
+    <li><b>Prepare the next move</b>Calculate the signed contractor-versus-carrier RCV gap, draft the supported demand and preserve the complete record for professional or legal review.</li>
   </ol>
+</div></section>
+
+<section id="professional"><div class="wrap">
+  <div class="sale-band">
+    <p class="over">The complete professional path</p>
+    <h2>Inspect once. Keep the record useful through every stage of the claim.</h2>
+    <div class="grid g2">
+      <div><h3>Before and during the inspection</h3><p class="muted">Create the claim, bring in policy and property records, capture phone narration and photographs, and add drone or roof-source data. Missing, incomplete and uncertain items stay visible for review.</p></div>
+      <div><h3>Scope and estimating</h3><p class="muted">Turn verified observations into rooms, areas and line items. Apply regional pricing and inflation context, preserve supplier quotes and keep every material assumption connected to its source.</p></div>
+      <div><h3>Carrier comparison and demand</h3><p class="muted">Ingest the carrier estimate, compare line by line, reconcile recoverable depreciation, deductible and payments received, and show the signed RCV gap. Draft a demand from the supported differences—not from a guaranteed-payment claim.</p></div>
+      <div><h3>Escalation without rebuilding the file</h3><p class="muted">If the supported difference is not resolved, the evidence, calculations, correspondence and revision history are already organized for PAi Legal or outside counsel to review. Legal action and recovery are never guaranteed.</p></div>
+    </div>
+    <div class="ctas"><a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4?cid=nfccop-claims-professional">Get PAi Claims</a><a class="btn btn-ghost" href="mailto:support@yprivateai.com?subject=PAi%20Claims%20professional%20annual%20access">Discuss professional access</a></div>
+  </div>
 </div></section>
 
 <section><div class="wrap grid g2" style="align-items:start">
@@ -271,13 +298,12 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
     <p>Choose local AI and your claim is analyzed on your own PC. Nothing goes to an AI company. If you'd rather use a cloud provider you already pay for, you can connect it with your own key. There's no account with us, and we don't keep your files.</p>
   </div>
   <div class="limits">
-    <h3>What it does not do</h3>
+    <h3>Designed for reviewable claim work</h3>
     <ul>
-      <li>It doesn't decide coverage or tell you what your insurer owes. It prices the work you scoped.</li>
-      <li>It doesn't fill in depreciation or deductibles for you. Those come from your policy.</li>
-      <li>Photos don't give it dimensions. You enter the measurements, or the app reads them from a report.</li>
-      <li>Tax and O&amp;P applicability are left for you to review. The app doesn't make legal conclusions.</li>
-      <li>It isn't a public adjuster or a lawyer, and it doesn't represent you.</li>
+      <li><strong>Measurements stay traceable.</strong> Dimensions come from a person, a measurement report, drone-supported data or supported roof data—not an unexplained guess from a photograph.</li>
+      <li><strong>Human review is part of the system.</strong> The software keeps incomplete and uncertain items visible so an adjuster or property owner can confirm what controls the estimate.</li>
+      <li><strong>Policy figures stay labeled.</strong> Recoverable depreciation, deductible and payments received are entered from the carrier and policy record, then calculated transparently.</li>
+      <li><strong>Professional judgment stays with the professional.</strong> Coverage, tax, O&amp;P, legal conclusions and representation remain outside the software's authority.</li>
     </ul>
   </div>
 </div></section>
@@ -347,6 +373,8 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
   <div class="ctas" style="justify-content:center"><a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4?cid=nfccop-claims-footer">Get it from Microsoft Store</a></div>
 </div></section>
 </main>
+
+<aside class="mobile-buy" aria-label="PAi Claims purchase shortcut"><span>Free download · first claim $20</span><a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4?cid=nfccop-claims-mobile">Get PAi Claims</a></aside>
 
 <footer><div class="wrap cols">
   <div>
