@@ -4,6 +4,6 @@ Sales pages for PAi software, published by The New Faith Church and Co-op, Inc. 
 
 Served by GitHub Pages from the `main` branch root, at the custom domain in `CNAME`.
 
-These files are built output. Edit the sources in the PAi Claims repo under
-`marketing/nfccop-site/`, run `python marketing/nfccop-site/build.py`, and copy
-`dist/*.html` here.
+The site includes distinct sales paths for the main software catalog, PAi Claims,
+professional claim users, property owners, disaster-relief access, PAi Legal,
+and self-represented legal users.
